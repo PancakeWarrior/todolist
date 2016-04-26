@@ -318,7 +318,7 @@
                     return config.cacheActive && config.cachePolicy.policy == 'fromRemoteOrCache' && Backendless.LocalCache.exists(config.urlBlueprint);
                 };
 
-                xhr.open(config.method, config.url, config.isAsync);
+                //xhr.open(config.method, config.url, config.isAsync);
                 xhr.setRequestHeader('Content-Type', contentType);
                 xhr.setRequestHeader('application-id', Backendless.applicationId);
                 xhr.setRequestHeader('secret-key', Backendless.secretKey);
@@ -374,7 +374,7 @@
         try {
             return cacheMethods[config.cachePolicy.policy].call(this, config);
         } catch (error) {
-            throw error;
+            //throw error;
         }
     };
 

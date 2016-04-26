@@ -1,35 +1,36 @@
 <html>
-  <head><title>The Blog of Chris Wyatt</title>
+  <head><title>TODO_LIST</title>
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="css/Todo List.css">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <link rel="icon" href="data:;base64,iVBORwOKGgo=">
     
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  </head>
    
- <body class="indigo">
+ <body class="blue-grey lighten-3">
      <header>
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
          <nav>
-             <div class="nav-wrapper indigo lighten-1">
-                 <ul id="slide-out" class="side-nav fixed indigo darken-1">
+             <div class="nav-wrapper indigo darken-3">
+                 <ul id="slide-out" class="side-nav fixed indigo darken-2">
                        
-                  <li><a href="index.html" class="indigo lighten-2" >Home</a></li>
-                  <li><a href="Admin.html" class="indigo lighten-2" >Admin</a></li>
+                  <li><a href="index.html" class="indigo accent-2">Home</a></li>
+                  <li><a href="Admin.html" class="indigo accent-3">Admin</a></li>
    <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
          <a class="collapsible-header"><i class="mdi-navigation-arrow-drop-down"></i></a>
          <div class="collapsible-body indigo ">
           <ul>
-            <li><a href="blog.html" class="indigo">Add Blog</a></li>
-            <li><a href="#!" class="indigo lighten-2">Second</a></li>
-            <li><a href="#!" class="indigo lighten-3">Third</a></li>
-            <li><a href="#!" class="indigo lighten-4">Fourth</a></li>
+            <li><a href="blog.html" class="black">Add Blog</a></li>
+            <li><a href="#!" class="indigo">Second</a></li>
+            <li><a href="#!" class="indigo">Third</a></li>
+            <li><a href="#!" class="indigo">Fourth</a></li>
           </ul>
         </div>
       </li>
@@ -40,7 +41,7 @@
                    
         <a href="#" data-activates="slide-out" class="button-collapse show-on-large btn btn-large waves-effect waves-light show-on-large" type="open" name="open"><i class="medium material-icons">view_week</i></a>
               
-                     <a href="#" class="brand-logo">My Blog</a>
+                     <a href="#" class="brand-logo">todo_list</a>
   
                </div>
            </nav>
@@ -48,7 +49,7 @@
      <main>
          <div class="container">
                 <div class="row">
-                    <h1 class="center-align" id="words" >The Blog of Chris Wyatt</h1>
+                    <h1 class="center-align" id="words" >Todo_List</h1>
                 </div>
                 <div class="row">
                     <div class="col s12 main-container">
@@ -57,7 +58,7 @@
                 </div>
             </div>
      </main>
-     <footer class="page-footer indigo darken-3">
+     <footer class="page-footer indigo">
          <div  class="container">
                 <p><a href="#">Back to the top</a></p>
             </div>
@@ -67,5 +68,22 @@
                 </div>
             </div>
      </footer>
+     <!--Import jQuery before materialize.js-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="libs/backendless.js"></script>
+      <script type="text/javascript" src="js/Todo_List.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+      <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+      
+      <script id="blogs-template" type="text/x-handlebars-template">
+          {{#each posts}}
+          <div class="blog-post">
+              <h2 class="blog-post-title">{{title}}</h2>
+              <p class="blog-post-meta"> Posted On {{format created}} by {{authorEmail}}</p>
+              <div>{{content}}</div>
+          </div>
+          {{/each}}
+      </script>
    </body>
 </html>

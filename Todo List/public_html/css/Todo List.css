@@ -37,16 +37,22 @@ main {
 }
 
 h1, h4, h6, h2, .words{
-    color:white;
+    color:azure;
+    font-family: 'Press Start 2P', cursive;
 }
 
 
     header, main, footer {
       padding-left: 240px;
+      font-family: 'Press Start 2P', cursive;
     }
 
     @media only screen and (max-width : 992px) {
       header, main, footer {
         padding-left: 0;
       }
+    }
+    
+    p {
+        font-family: 'Press Start 2P', cursive;
     }
