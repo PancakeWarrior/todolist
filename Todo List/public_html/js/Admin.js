@@ -15,9 +15,9 @@ $(function () {
         $('.main-container').html(loginTemplate);
     }
     
-    $(document).on('submit', 'form-signin',function(event) {
+    $(document).on('submit', '.form-signin',function(event) {
         event.preventDefault();
-        
+        console.log("login button clicked");
         var data = $(this).serializeArray(),
             email = data[0].value,
             password = data[1].value;
@@ -42,7 +42,7 @@ $(function () {
             }
             else{
                 
-                var dataStore = Backendless.Perssistence.of(Posts);
+                var dataStore = Backendless.Persistence.of(Posts);
                 
                 var postObject = new posts({
                     title: "title",

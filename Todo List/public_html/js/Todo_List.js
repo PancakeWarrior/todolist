@@ -5,19 +5,11 @@ $(function () {
          
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
-    var dataStore = Backendless.Persistence.of(Posts);
-    var post = new Post({title: "My first Blog Post", content: "My first blog post content", email: "email@email.com"});
+    //var dataStore = Backendless.Persistence.of(Posts);
+    //var post = new Posts({title: "My First Blog Post", content:"My first blog post content", authorEmail:"email@email.com"});
+    //dataStore.save(new Posts({}));
     
-});
-
-function Posts(args){
-    args = args || {};
-    this.title = args.title || "";
-    this.content = args.content || "";
-    this.authorEmail = args.authorEmail || "";
-}
-
-/*var postsCollection = Backendless.Persistence.of(Posts).find();
+   var postsCollection = Backendless.Persistence.of(Posts).find();
     
     console.log(postsCollection);
     
@@ -34,4 +26,12 @@ function Posts(args){
     var blogHTML = blogTemplate(wrapper);
     
     $('.main-container').html(blogHTML);
-    */
+    
+});
+
+function Posts(args){
+    args = args || {};
+    this.title = args.title || "";
+    this.content = args.content || "";
+    this.authorEmail = args.authorEmail || "";
+}
