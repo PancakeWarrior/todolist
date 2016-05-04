@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+/*Blog Posts*/
+
+.blog-post {
+    margin-bottom: 60px;
+    
+}
+
+.blog-post-title {
+    margin-bottom: 5px;
+    font-size: 40px;
+    color:white ;
+}
+
+.blog-post-meta {
+    margin-bottom: 20px;
+    color: teal;
+    font-style:italic;
+}
+
+.blog-post-content{
+    color: white;
+    font-size: 20px;
+}
+
+.brand-logo {
+    text-align: center;
+
+}
+
+h1, h4, h6, h2, .words{
+    color:azure;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+    header, main, footer {
+      padding-left: 240px;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+    
+    p {
+        font-family: 'Press Start 2P', cursive;
+    }

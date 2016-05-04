@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+  <html>
+      <head><title>ADMIN</title>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/Todo List.css">
+      <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+      <link rel="icon" href="data:;base64,iVBORwOKGgo=">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+<body class="blue-grey">
+        <header>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <nav>
+                <div class="nav-wrapper blue-grey darken-3 ">
+                    <ul id="slide-out" class="side-nav fixed blue-grey darken-2">
+                        
+                    <li><a href="index.html" class="blue-grey lighten-2" >Home</a></li>
+                    <li><a href="admin.html" class="blue-grey lighten-3" >Admin</a></li>
+
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header blue-grey lighten-4">Blog<i class="mdi-navigation-arrow-drop-down"></i></a>
+            <div class="collapsible-body blue-grey">
+              <ul>
+                <li><a href="blog.html" class="black">Add Blog</a></li>
+                <li><a href="#!" class="blue-grey">Second</a></li>
+                <li><a href="#!" class="blue-grey">Third</a></li>
+                <li><a href="#!" class="blue-grey">Fourth</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="#" data-activates="slide-out" class="button-collapse show-on-large btn btn-large waves-effect waves-light show-on-large" type="open" name="open"><i class="medium material-icons">view_week</i></a>
+
+                    <a href="#" class="brand-logo">todo_list</a>
+
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <h1 class="center-align">Sign In</h1>
+                </div>
+                <div class="row">
+                    <div class="col s12 main-container">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer blue-grey darken-3">
+            <div  class="container">
+                <p><a href="#">Back to the top</a></p>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    @2016 Chris Wyatt
+                </div>
+            </div>
+        </footer>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="libs/backendless.js"></script>
+      <script type="text/javascript" src="js/Admin.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+      <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+      
+
+      <script id="login-template" type="text/x-handlebars-template">
+
+                    <div class="col s6">
+            <h2 class="center-align"><h4>Login</h4></h2>
+            <div>
+              <form class="col s12 form-signin">
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="email" type="email" name="email" class="validate">
+                          <label for="email"><h6>Email</h6></label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <input id="password" type="password" name="password" class="validate">
+                          <label for="password"><h6>Password</h6></label>
+                      </div>
+                  </div>               
+                <div class="row">
+                      <div class="col s12">
+                          <p class="right-align">
+                              <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                          </p>
+                      </div>
+                  </div>    
+              </form>
+          </div>
+      </div></script>
+
+      <script id="welcome-template" type="text/x-handlebars-template">
+           <h2>Welcome, {{email}}</h2>
+          <button class="btn btn-large waves-effect waves-light add-blog">Add a new blog</button>
+          <button class="btn btn-large waves-effect waves-light logout">Logout</button> 
+      </script>
+
+      <script id="add-blog-template" type="text/x-handlebars-template">
+               <h2>Add a new Blog</h2>
+      <div class="row">
+          <form class="col s12 form-add-blog">
+              <div class="row">
+                <div class="input-field col s12">
+                    <input id="title" type="text" name="title">
+                    <label for="title"><h6>Title</h6></label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="input-field col s12">
+                      <textarea id ="content" name="content" class="materialize-textarea"></textarea>
+                      <label for="content"><h6>Content</h6></label>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col s12">
+                      <p class="right-align">
+                          <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
+                      </p>
+                  </div>    
+              </div>
+          </form>
+      </div>
+      </script>
+    </body>
+  </html>
